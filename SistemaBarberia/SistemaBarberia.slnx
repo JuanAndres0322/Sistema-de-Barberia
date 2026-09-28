@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Consola_Barberia/Consola_Barberia.csproj" />
+  <Project Path="Lib_Barberia/Lib_Barberia.csproj" />
+  <Project Path="MSTest_Barberia/MSTest_Barberia.csproj" />
+</Solution>
