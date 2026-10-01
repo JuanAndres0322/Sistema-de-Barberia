@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Vae/fvZDzwU=",
+  "dgSpecHash": "tPqyCfX57Ow=",
   "success": true,
-  "projectFilePath": "C:\\Users\\juana\\OneDrive\\Desktop\\SistemaBarberia\\SistemaBarberia\\Consola_Barberia\\Consola_Barberia.csproj",
+  "projectFilePath": "C:\\Users\\juana\\OneDrive\\Desktop\\SistemaBarberia\\Sistema-de-Barberia\\SistemaBarberia\\Consola_Barberia\\Consola_Barberia.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\juana\\.nuget\\packages\\azure.core\\1.50.0\\azure.core.1.50.0.nupkg.sha512",
     "C:\\Users\\juana\\.nuget\\packages\\azure.identity\\1.17.1\\azure.identity.1.17.1.nupkg.sha512",

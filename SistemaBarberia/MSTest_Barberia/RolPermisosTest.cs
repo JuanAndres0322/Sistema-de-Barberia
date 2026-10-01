@@ -30,7 +30,7 @@ namespace MSTest_Barberia
             };
             iConexion.RolPermisos!.Add(entidad);
             iConexion.SaveChanges();
-            return entidad.ID_Rol_Permiso > 0;
+            return entidad.ID_RolPermiso > 0;
         }
 
         private bool Modificar()

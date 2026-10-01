@@ -5,8 +5,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MSTest_Barberia
 {
-    // Clase base: crea la conexion una sola vez para todas las pruebas.
-    // Si separan las pruebas en archivos, cada archivo necesita esta clase (o dejarla en su propio archivo).
     public abstract class BaseTest
     {
         protected readonly IConexion iConexion;
@@ -15,7 +13,7 @@ namespace MSTest_Barberia
         {
             iConexion = new Conexion
             {
-                StringConexion = "Server=localhost;Database=BD_Barberia;Trusted_Connection=True;TrustServerCertificate=True;"
+                StringConexion = "Server=.\\SQLEXPRESS;Database=BD_Barberia;Trusted_Connection=True;TrustServerCertificate=True;"
             };
         }
 

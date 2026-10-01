@@ -1735,11 +1735,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\juana\\OneDrive\\Desktop\\SistemaBarberia\\SistemaBarberia\\Lib_Barberia\\Lib_Barberia.csproj",
+      "projectUniqueName": "C:\\Users\\juana\\OneDrive\\Desktop\\SistemaBarberia\\Sistema-de-Barberia\\SistemaBarberia\\Lib_Barberia\\Lib_Barberia.csproj",
       "projectName": "Lib_Barberia",
-      "projectPath": "C:\\Users\\juana\\OneDrive\\Desktop\\SistemaBarberia\\SistemaBarberia\\Lib_Barberia\\Lib_Barberia.csproj",
+      "projectPath": "C:\\Users\\juana\\OneDrive\\Desktop\\SistemaBarberia\\Sistema-de-Barberia\\SistemaBarberia\\Lib_Barberia\\Lib_Barberia.csproj",
       "packagesPath": "C:\\Users\\juana\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\juana\\OneDrive\\Desktop\\SistemaBarberia\\SistemaBarberia\\Lib_Barberia\\obj\\",
+      "outputPath": "C:\\Users\\juana\\OneDrive\\Desktop\\SistemaBarberia\\Sistema-de-Barberia\\SistemaBarberia\\Lib_Barberia\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

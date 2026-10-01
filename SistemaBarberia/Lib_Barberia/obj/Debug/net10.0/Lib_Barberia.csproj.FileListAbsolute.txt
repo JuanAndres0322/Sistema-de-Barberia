@@ -1,0 +1,14 @@
+C:\Users\juana\OneDrive\Desktop\SistemaBarberia\Sistema-de-Barberia\SistemaBarberia\Lib_Barberia\bin\Debug\net10.0\Lib_Barberia.deps.json
+C:\Users\juana\OneDrive\Desktop\SistemaBarberia\Sistema-de-Barberia\SistemaBarberia\Lib_Barberia\bin\Debug\net10.0\Lib_Barberia.dll
+C:\Users\juana\OneDrive\Desktop\SistemaBarberia\Sistema-de-Barberia\SistemaBarberia\Lib_Barberia\bin\Debug\net10.0\Lib_Barberia.pdb
+C:\Users\juana\OneDrive\Desktop\SistemaBarberia\Sistema-de-Barberia\SistemaBarberia\Lib_Barberia\obj\Debug\net10.0\Lib_Barberia.csproj.AssemblyReference.cache
+C:\Users\juana\OneDrive\Desktop\SistemaBarberia\Sistema-de-Barberia\SistemaBarberia\Lib_Barberia\obj\Debug\net10.0\Lib_Barberia.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\juana\OneDrive\Desktop\SistemaBarberia\Sistema-de-Barberia\SistemaBarberia\Lib_Barberia\obj\Debug\net10.0\Lib_Barberia.AssemblyInfoInputs.cache
+C:\Users\juana\OneDrive\Desktop\SistemaBarberia\Sistema-de-Barberia\SistemaBarberia\Lib_Barberia\obj\Debug\net10.0\Lib_Barberia.AssemblyInfo.cs
+C:\Users\juana\OneDrive\Desktop\SistemaBarberia\Sistema-de-Barberia\SistemaBarberia\Lib_Barberia\obj\Debug\net10.0\Lib_Barberia.csproj.CoreCompileInputs.cache
+C:\Users\juana\OneDrive\Desktop\SistemaBarberia\Sistema-de-Barberia\SistemaBarberia\Lib_Barberia\obj\Debug\net10.0\Lib_Barberia.sourcelink.json
+C:\Users\juana\OneDrive\Desktop\SistemaBarberia\Sistema-de-Barberia\SistemaBarberia\Lib_Barberia\obj\Debug\net10.0\Lib_Barberia.dll
+C:\Users\juana\OneDrive\Desktop\SistemaBarberia\Sistema-de-Barberia\SistemaBarberia\Lib_Barberia\obj\Debug\net10.0\refint\Lib_Barberia.dll
+C:\Users\juana\OneDrive\Desktop\SistemaBarberia\Sistema-de-Barberia\SistemaBarberia\Lib_Barberia\obj\Debug\net10.0\Lib_Barberia.pdb
+C:\Users\juana\OneDrive\Desktop\SistemaBarberia\Sistema-de-Barberia\SistemaBarberia\Lib_Barberia\obj\Debug\net10.0\ref\Lib_Barberia.dll
+C:\Users\juana\OneDrive\Desktop\SistemaBarberia\Sistema-de-Barberia\SistemaBarberia\Lib_Barberia\obj\Debug\net10.0\Lib_Barb.4B035EF8.Up2Date

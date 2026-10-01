@@ -30,7 +30,7 @@ namespace MSTest_Barberia
             };
             iConexion.CitaServicios!.Add(entidad);
             iConexion.SaveChanges();
-            return entidad.ID_Cita_Servicio > 0;
+            return entidad.ID_CitaServicio > 0;
         }
 
         private bool Modificar()
