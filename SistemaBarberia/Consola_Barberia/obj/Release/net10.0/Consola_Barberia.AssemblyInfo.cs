@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Consola_Barberia")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+388520bdb7d14faa8b85cd51f3c09c8ea820f2da")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2c2f1173d99550ae7264fc64b9d17e354e2ef817")]
 [assembly: System.Reflection.AssemblyProductAttribute("Consola_Barberia")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Consola_Barberia")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
