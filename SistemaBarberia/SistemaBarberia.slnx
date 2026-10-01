@@ -1,5 +1,4 @@
 <Solution>
-  <Project Path="ASP_Servicios/ASP_Servicios.csproj" Id="5efcba46-e610-4985-8bfa-aff2000151c5" />
   <Project Path="Consola_Barberia/Consola_Barberia.csproj" />
   <Project Path="Lib_Barberia/Lib_Barberia.csproj" />
   <Project Path="MSTest_Barberia/MSTest_Barberia.csproj" />
