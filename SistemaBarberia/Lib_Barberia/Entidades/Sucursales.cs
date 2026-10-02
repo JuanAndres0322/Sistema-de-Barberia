@@ -1,7 +1,9 @@
-﻿namespace lib_Barberia.Entidades
+﻿using System.ComponentModel.DataAnnotations;
+namespace lib_Barberia.Entidades
 {
     public class Sucursales
     {
+        [Key]
         public int ID_Sucursal { get; set; }
         public string Nombre { get; set; } = null!;
         public string? Direccion { get; set; }

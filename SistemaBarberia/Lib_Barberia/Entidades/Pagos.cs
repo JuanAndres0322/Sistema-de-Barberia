@@ -1,8 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace lib_Barberia.Entidades
 {
     public class Pagos
     {
+        [Key]
         public int ID_Pago { get; set; }
 
         public int? ID_Cita { get; set; }

@@ -1,7 +1,9 @@
-﻿namespace lib_Barberia.Entidades
+﻿using System.ComponentModel.DataAnnotations;
+namespace lib_Barberia.Entidades
 {
     public class Barberos
     {
+        [Key]
         public int ID_Barbero { get; set; }
         public string Cedula { get; set; } = null!;
         public string Nombre { get; set; } = null!;

@@ -1,8 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace lib_Barberia.Entidades
 {
     public class HorariosDisponibilidad
     {
+        [Key]
         public int ID_Horario { get; set; }
 
         public int? ID_Barbero { get; set; }

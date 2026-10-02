@@ -1,8 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace lib_Barberia.Entidades
 {
     public class CitaServicios
     {
+        [Key]
         [Column("ID_Cita_Servicio")]
         public int ID_CitaServicio { get; set; }
 

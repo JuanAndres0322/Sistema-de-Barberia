@@ -1,14 +1,22 @@
 using lib_Barberia.Entidades;
 using lib_Barberia.Implementaciones;
 using lib_Barberia.Interfaces;
+using Lib_Barberia.Nucleo;
 using Microsoft.EntityFrameworkCore;
 
 namespace MSTest_Barberia
 {
     [TestClass]
-    public class CajasDiariasTest : BaseTest
+    public class CajasDiariasTest
     {
+        private IConexion? iConexion;
         private CajasDiarias? entidad;
+
+        public CajasDiariasTest()
+        {
+            this.iConexion = new Conexion();
+            this.iConexion.StringConexion = DatosGenerales.ObtenerStringConnection();
+        }
 
         [TestMethod]
         public void Ejecutar()
@@ -37,7 +45,9 @@ namespace MSTest_Barberia
         private bool Modificar()
         {
             entidad!.EstadoCaja = "Cerrada";
-            Actualizar(entidad);
+            var entry = this.iConexion!.Entry(this.entidad!);
+            entry.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            this.iConexion!.SaveChanges();
             return true;
         }
 
@@ -45,8 +55,8 @@ namespace MSTest_Barberia
 
         private bool Borrar()
         {
-            iConexion.CajasDiarias!.Remove(entidad!);
-            iConexion.SaveChanges();
+            iConexion?.CajasDiarias!.Remove(entidad!);
+            iConexion?.SaveChanges();
             return true;
         }
     }

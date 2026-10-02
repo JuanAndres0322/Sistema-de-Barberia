@@ -1,14 +1,22 @@
 using lib_Barberia.Entidades;
 using lib_Barberia.Implementaciones;
 using lib_Barberia.Interfaces;
+using Lib_Barberia.Nucleo;
 using Microsoft.EntityFrameworkCore;
 
 namespace MSTest_Barberia
 {
     [TestClass]
-    public class RolPermisosTest : BaseTest
+    public class RolPermisosTest
     {
+        private IConexion iConexion;
         private RolPermisos? entidad;
+
+        public RolPermisosTest()
+        {
+            this.iConexion = new Conexion();
+            this.iConexion.StringConexion = DatosGenerales.ObtenerStringConnection();
+        }
 
         [TestMethod]
         public void Ejecutar()
@@ -36,7 +44,9 @@ namespace MSTest_Barberia
         private bool Modificar()
         {
             entidad!.Habilitado = false;
-            Actualizar(entidad);
+            var entry = this.iConexion!.Entry(this.entidad!);
+            entry.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            this.iConexion!.SaveChanges();
             return true;
         }
 

@@ -1,8 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace lib_Barberia.Entidades
 {
     public class RolPermisos
     {
+        [Key]
         [Column("ID_Rol_Permiso")]
         public int ID_RolPermiso { get; set; }
 

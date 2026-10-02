@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.ComponentModel.DataAnnotations;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,6 +7,7 @@ namespace lib_Barberia.Entidades
 {
     public class Clientes
     {
+        [Key]
         public int ID_Cliente { get; set; }
         public string Cedula { get; set; } = null!;
         public string Nombre { get; set; } = null!;

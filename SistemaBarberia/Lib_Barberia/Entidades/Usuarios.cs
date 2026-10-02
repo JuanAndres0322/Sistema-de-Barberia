@@ -1,8 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace lib_Barberia.Entidades
 {
     public class Usuarios
     {
+        [Key]
         public int ID_Usuario { get; set; }
 
         public int? ID_Rol { get; set; }
