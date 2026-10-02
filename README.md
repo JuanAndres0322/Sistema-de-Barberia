@@ -1,5 +1,14 @@
 # Sistema-de-Barberia
 
-Primer cambio:
-Por: Juan Andres Gonzalez Rivera
-Se creó la estructura principal de la solución, integrada por la aplicación de consola, el proyecto de pruebas con MSTest y la librería de clases. En esta última se incorporaron las 20 entidades del sistema y el script SQL de la base de datos.
+---Para hacer funcionar el proyecto---
+Profe, para que el proyecto y las pruebas le corran bien en su equipo, solo hay que hacer un pequeño ajuste, ya que la base de datos quedó apuntando al servidor de mi computador.
+
+Solo necesita hacer lo siguiente:
+
+Ir a la carpeta núcleo.
+
+Abrir el archivo DatosGenerales.
+
+Cambiar el string connection poniendo el nombre de su servidor en lugar del mío.
+
+Y listo, Solo con cambiar ese pedacito ya le debería dar todo sin problema.
