@@ -10,7 +10,7 @@ Ir a la carpeta núcleo.
 
 Abrir el archivo DatosGenerales.
 
-Cambiar el string connection poniendo el nombre de su servidor en lugar del mío.
+Cambiar el stringconexion poniendo el nombre de su servidor en lugar del mío.
 
 Y listo, Solo con cambiar ese pedacito ya le debería dar todo sin problema.
 
