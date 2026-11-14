@@ -1,34 +1,46 @@
-﻿using lib_Barberia.Interfaces;
+﻿using lib_Barberia.Entidades;
 using Lib_Barberia.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Linq;
 
-namespace asp_servicios_barberia.Controllers
+namespace servicio_horarios.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class CitaServiciosController : ControllerBase
     {
-        private IConexion conexion;
+        private readonly ICitaServiciosAplicacion _CitaServiciosAplicacion;
 
-        public CitaServiciosController(IConexion conexion)
+        public CitaServiciosController(ICitaServiciosAplicacion CitaServiciosAplicacion)
         {
-            this.conexion = conexion;
-            this.conexion.StringConexion = "Server=.\\SQLEXPRESS;Database=BD_Barberia;Trusted_Connection=True;TrustServerCertificate=True;";
+            _CitaServiciosAplicacion = CitaServiciosAplicacion;
         }
 
+        // GET: /CitaServicios/Listar
         [HttpGet]
-        public IActionResult Get()
+        public List<CitaServicios> Listar()
         {
-            try
-            {
-                return Ok(this.conexion.CitaServicios!.ToList());
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return _CitaServiciosAplicacion.Listar();
+        }
+
+        // POST: /CitaServicios/Guardar
+        [HttpPost]
+        public CitaServicios Guardar([FromBody] CitaServicios entidad)
+        {
+            return _CitaServiciosAplicacion.Guardar(entidad);
+        }
+
+        // PUT: /CitaServicios/Modificar
+        [HttpPut]
+        public CitaServicios Modificar([FromBody] CitaServicios entidad)
+        {
+            return _CitaServiciosAplicacion.Modificar(entidad);
+        }
+
+        // DELETE: /CitaServicios/Borrar
+        [HttpDelete]
+        public CitaServicios Borrar([FromBody] CitaServicios entidad)
+        {
+            return _CitaServiciosAplicacion.Borrar(entidad);
         }
     }
 }

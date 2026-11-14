@@ -1,34 +1,46 @@
-﻿using lib_Barberia.Interfaces;
+﻿using lib_Barberia.Entidades;
 using Lib_Barberia.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Linq;
 
-namespace asp_servicios_barberia.Controllers
+namespace servicio_horarios.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class CajasDiariasController : ControllerBase
     {
-        private IConexion conexion;
+        private readonly ICajasDiariasAplicacion _CajasDiariasAplicacion;
 
-        public CajasDiariasController(IConexion conexion)
+        public CajasDiariasController(ICajasDiariasAplicacion CajasDiariasAplicacion)
         {
-            this.conexion = conexion;
-            this.conexion.StringConexion = "Server=.\\SQLEXPRESS;Database=BD_Barberia;Trusted_Connection=True;TrustServerCertificate=True;";
+            _CajasDiariasAplicacion = CajasDiariasAplicacion;
         }
 
+        // GET: /CajasDiarias/Listar
         [HttpGet]
-        public IActionResult Get()
+        public List<CajasDiarias> Listar()
         {
-            try
-            {
-                return Ok(this.conexion.CajasDiarias!.ToList());
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return _CajasDiariasAplicacion.Listar();
+        }
+
+        // POST: /CajasDiarias/Guardar
+        [HttpPost]
+        public CajasDiarias Guardar([FromBody] CajasDiarias entidad)
+        {
+            return _CajasDiariasAplicacion.Guardar(entidad);
+        }
+
+        // PUT: /CajasDiarias/Modificar
+        [HttpPut]
+        public CajasDiarias Modificar([FromBody] CajasDiarias entidad)
+        {
+            return _CajasDiariasAplicacion.Modificar(entidad);
+        }
+
+        // DELETE: /CajasDiarias/Borrar
+        [HttpDelete]
+        public CajasDiarias Borrar([FromBody] CajasDiarias entidad)
+        {
+            return _CajasDiariasAplicacion.Borrar(entidad);
         }
     }
 }

@@ -1,34 +1,46 @@
-﻿using lib_Barberia.Interfaces;
+﻿using lib_Barberia.Entidades;
 using Lib_Barberia.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Linq;
 
-namespace asp_servicios_barberia.Controllers
+namespace servicio_horarios.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class CitasController : ControllerBase
     {
-        private IConexion conexion;
+        private readonly ICitasAplicacion _CitasAplicacion;
 
-        public CitasController(IConexion conexion)
+        public CitasController(ICitasAplicacion CitasAplicacion)
         {
-            this.conexion = conexion;
-            this.conexion.StringConexion = "Server=.\\SQLEXPRESS;Database=BD_Barberia;Trusted_Connection=True;TrustServerCertificate=True;";
+            _CitasAplicacion = CitasAplicacion;
         }
 
+        // GET: /Citas/Listar
         [HttpGet]
-        public IActionResult Get()
+        public List<Citas> Listar()
         {
-            try
-            {
-                return Ok(this.conexion.Citas!.ToList());
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return _CitasAplicacion.Listar();
+        }
+
+        // POST: /Citas/Guardar
+        [HttpPost]
+        public Citas Guardar([FromBody] Citas entidad)
+        {
+            return _CitasAplicacion.Guardar(entidad);
+        }
+
+        // PUT: /Citas/Modificar
+        [HttpPut]
+        public Citas Modificar([FromBody] Citas entidad)
+        {
+            return _CitasAplicacion.Modificar(entidad);
+        }
+
+        // DELETE: /Citas/Borrar
+        [HttpDelete]
+        public Citas Borrar([FromBody] Citas entidad)
+        {
+            return _CitasAplicacion.Borrar(entidad);
         }
     }
 }

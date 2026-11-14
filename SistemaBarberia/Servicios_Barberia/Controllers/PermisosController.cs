@@ -1,34 +1,46 @@
-﻿using lib_Barberia.Interfaces;
+﻿using lib_Barberia.Entidades;
 using Lib_Barberia.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Linq;
 
-namespace asp_servicios_barberia.Controllers
+namespace servicio_horarios.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class PermisosController : ControllerBase
     {
-        private IConexion conexion;
+        private readonly IPermisosAplicacion _PermisosAplicacion;
 
-        public PermisosController(IConexion conexion)
+        public PermisosController(IPermisosAplicacion PermisosAplicacion)
         {
-            this.conexion = conexion;
-            this.conexion.StringConexion = "Server=.\\SQLEXPRESS;Database=BD_Barberia;Trusted_Connection=True;TrustServerCertificate=True;";
+            _PermisosAplicacion = PermisosAplicacion;
         }
 
+        // GET: /Permisos/Listar
         [HttpGet]
-        public IActionResult Get()
+        public List<Permisos> Listar()
         {
-            try
-            {
-                return Ok(this.conexion.Permisos!.ToList());
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return _PermisosAplicacion.Listar();
+        }
+
+        // POST: /Permisos/Guardar
+        [HttpPost]
+        public Permisos Guardar([FromBody] Permisos entidad)
+        {
+            return _PermisosAplicacion.Guardar(entidad);
+        }
+
+        // PUT: /Permisos/Modificar
+        [HttpPut]
+        public Permisos Modificar([FromBody] Permisos entidad)
+        {
+            return _PermisosAplicacion.Modificar(entidad);
+        }
+
+        // DELETE: /Permisos/Borrar
+        [HttpDelete]
+        public Permisos Borrar([FromBody] Permisos entidad)
+        {
+            return _PermisosAplicacion.Borrar(entidad);
         }
     }
 }

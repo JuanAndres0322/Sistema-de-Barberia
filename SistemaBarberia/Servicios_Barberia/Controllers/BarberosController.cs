@@ -1,34 +1,46 @@
-﻿using lib_Barberia.Interfaces;
+﻿using lib_Barberia.Entidades;
 using Lib_Barberia.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Linq;
 
-namespace asp_servicios_barberia.Controllers
+namespace servicio_horarios.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class BarberosController : ControllerBase
     {
-        private IConexion conexion;
+        private readonly IBarberosAplicacion _BarberosAplicacion;
 
-        public BarberosController(IConexion conexion)
+        public BarberosController(IBarberosAplicacion BarberosAplicacion)
         {
-            this.conexion = conexion;
-            this.conexion.StringConexion = "Server=.\\SQLEXPRESS;Database=BD_Barberia;Trusted_Connection=True;TrustServerCertificate=True;";
+            _BarberosAplicacion = BarberosAplicacion;
         }
 
+        // GET: /Barberos/Listar
         [HttpGet]
-        public IActionResult Get()
+        public List<Barberos> Listar()
         {
-            try
-            {
-                return Ok(this.conexion.Barberos!.ToList());
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return _BarberosAplicacion.Listar();
+        }
+
+        // POST: /Barberos/Guardar
+        [HttpPost]
+        public Barberos Guardar([FromBody] Barberos entidad)
+        {
+            return _BarberosAplicacion.Guardar(entidad);
+        }
+
+        // PUT: /Barberos/Modificar
+        [HttpPut]
+        public Barberos Modificar([FromBody] Barberos entidad)
+        {
+            return _BarberosAplicacion.Modificar(entidad);
+        }
+
+        // DELETE: /Barberos/Borrar
+        [HttpDelete]
+        public Barberos Borrar([FromBody] Barberos entidad)
+        {
+            return _BarberosAplicacion.Borrar(entidad);
         }
     }
 }

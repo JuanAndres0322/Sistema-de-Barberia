@@ -1,34 +1,46 @@
-﻿using lib_Barberia.Interfaces;
+﻿using lib_Barberia.Entidades;
 using Lib_Barberia.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Linq;
 
-namespace asp_servicios_barberia.Controllers
+namespace servicio_horarios.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class SucursalesController : ControllerBase
     {
-        private IConexion conexion;
+        private readonly ISucursalesAplicacion _SucursalesAplicacion;
 
-        public SucursalesController(IConexion conexion)
+        public SucursalesController(ISucursalesAplicacion SucursalesAplicacion)
         {
-            this.conexion = conexion;
-            this.conexion.StringConexion = "Server=.\\SQLEXPRESS;Database=BD_Barberia;Trusted_Connection=True;TrustServerCertificate=True;";
+            _SucursalesAplicacion = SucursalesAplicacion;
         }
 
+        // GET: /Sucursales/Listar
         [HttpGet]
-        public IActionResult Get()
+        public List<Sucursales> Listar()
         {
-            try
-            {
-                return Ok(this.conexion.Sucursales!.ToList());
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return _SucursalesAplicacion.Listar();
+        }
+
+        // POST: /Sucursales/Guardar
+        [HttpPost]
+        public Sucursales Guardar([FromBody] Sucursales entidad)
+        {
+            return _SucursalesAplicacion.Guardar(entidad);
+        }
+
+        // PUT: /Sucursales/Modificar
+        [HttpPut]
+        public Sucursales Modificar([FromBody] Sucursales entidad)
+        {
+            return _SucursalesAplicacion.Modificar(entidad);
+        }
+
+        // DELETE: /Sucursales/Borrar
+        [HttpDelete]
+        public Sucursales Borrar([FromBody] Sucursales entidad)
+        {
+            return _SucursalesAplicacion.Borrar(entidad);
         }
     }
 }

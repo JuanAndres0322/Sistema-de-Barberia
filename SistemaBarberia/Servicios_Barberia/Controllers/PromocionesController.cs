@@ -1,34 +1,46 @@
-﻿using lib_Barberia.Interfaces;
+﻿using lib_Barberia.Entidades;
 using Lib_Barberia.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Linq;
 
-namespace asp_servicios_barberia.Controllers
+namespace servicio_horarios.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class PromocionesController : ControllerBase
     {
-        private IConexion conexion;
+        private readonly IPromocionesAplicacion _PromocionesAplicacion;
 
-        public PromocionesController(IConexion conexion)
+        public PromocionesController(IPromocionesAplicacion PromocionesAplicacion)
         {
-            this.conexion = conexion;
-            this.conexion.StringConexion = "Server=.\\SQLEXPRESS;Database=BD_Barberia;Trusted_Connection=True;TrustServerCertificate=True;";
+            _PromocionesAplicacion = PromocionesAplicacion;
         }
 
+        // GET: /Promociones/Listar
         [HttpGet]
-        public IActionResult Get()
+        public List<Promociones> Listar()
         {
-            try
-            {
-                return Ok(this.conexion.Promociones!.ToList());
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return _PromocionesAplicacion.Listar();
+        }
+
+        // POST: /Promociones/Guardar
+        [HttpPost]
+        public Promociones Guardar([FromBody] Promociones entidad)
+        {
+            return _PromocionesAplicacion.Guardar(entidad);
+        }
+
+        // PUT: /Promociones/Modificar
+        [HttpPut]
+        public Promociones Modificar([FromBody] Promociones entidad)
+        {
+            return _PromocionesAplicacion.Modificar(entidad);
+        }
+
+        // DELETE: /Promociones/Borrar
+        [HttpDelete]
+        public Promociones Borrar([FromBody] Promociones entidad)
+        {
+            return _PromocionesAplicacion.Borrar(entidad);
         }
     }
 }

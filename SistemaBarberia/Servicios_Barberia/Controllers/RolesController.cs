@@ -1,34 +1,46 @@
-﻿using lib_Barberia.Interfaces;
+﻿using lib_Barberia.Entidades;
 using Lib_Barberia.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Linq;
 
-namespace asp_servicios_barberia.Controllers
+namespace servicio_horarios.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class RolesController : ControllerBase
     {
-        private IConexion conexion;
+        private readonly IRolesAplicacion _RolesAplicacion;
 
-        public RolesController(IConexion conexion)
+        public RolesController(IRolesAplicacion RolesAplicacion)
         {
-            this.conexion = conexion;
-            this.conexion.StringConexion = "Server=.\\SQLEXPRESS;Database=BD_Barberia;Trusted_Connection=True;TrustServerCertificate=True;";
+            _RolesAplicacion = RolesAplicacion;
         }
 
+        // GET: /Roles/Listar
         [HttpGet]
-        public IActionResult Get()
+        public List<Roles> Listar()
         {
-            try
-            {
-                return Ok(this.conexion.Roles!.ToList());
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return _RolesAplicacion.Listar();
+        }
+
+        // POST: /Roles/Guardar
+        [HttpPost]
+        public Roles Guardar([FromBody] Roles entidad)
+        {
+            return _RolesAplicacion.Guardar(entidad);
+        }
+
+        // PUT: /Roles/Modificar
+        [HttpPut]
+        public Roles Modificar([FromBody] Roles entidad)
+        {
+            return _RolesAplicacion.Modificar(entidad);
+        }
+
+        // DELETE: /Roles/Borrar
+        [HttpDelete]
+        public Roles Borrar([FromBody] Roles entidad)
+        {
+            return _RolesAplicacion.Borrar(entidad);
         }
     }
 }

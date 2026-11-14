@@ -10,203 +10,1963 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "asp_servicios_barberia.Controllers.BarberosController",
-    "Method": "Get",
-    "RelativePath": "Barberos",
-    "HttpMethod": "GET",
+    "ContainingType": "servicio_horarios.Controllers.BarberosController",
+    "Method": "Borrar",
+    "RelativePath": "Barberos/Borrar",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Barberos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Barberos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "asp_servicios_barberia.Controllers.CajasDiariasController",
-    "Method": "Get",
-    "RelativePath": "CajasDiarias",
-    "HttpMethod": "GET",
+    "ContainingType": "servicio_horarios.Controllers.BarberosController",
+    "Method": "Guardar",
+    "RelativePath": "Barberos/Guardar",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Barberos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Barberos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "asp_servicios_barberia.Controllers.CategoriasProductoController",
-    "Method": "Get",
-    "RelativePath": "CategoriasProducto",
+    "ContainingType": "servicio_horarios.Controllers.BarberosController",
+    "Method": "Listar",
+    "RelativePath": "Barberos/Listar",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[lib_Barberia.Entidades.Barberos, Lib_Barberia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "asp_servicios_barberia.Controllers.CitasController",
-    "Method": "Get",
-    "RelativePath": "Citas",
-    "HttpMethod": "GET",
+    "ContainingType": "servicio_horarios.Controllers.BarberosController",
+    "Method": "Modificar",
+    "RelativePath": "Barberos/Modificar",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Barberos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Barberos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "asp_servicios_barberia.Controllers.CitaServiciosController",
-    "Method": "Get",
-    "RelativePath": "CitaServicios",
-    "HttpMethod": "GET",
+    "ContainingType": "servicio_horarios.Controllers.CajasDiariasController",
+    "Method": "Borrar",
+    "RelativePath": "CajasDiarias/Borrar",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.CajasDiarias",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.CajasDiarias",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "asp_servicios_barberia.Controllers.ClientesController",
-    "Method": "Get",
-    "RelativePath": "Clientes",
-    "HttpMethod": "GET",
+    "ContainingType": "servicio_horarios.Controllers.CajasDiariasController",
+    "Method": "Guardar",
+    "RelativePath": "CajasDiarias/Guardar",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.CajasDiarias",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.CajasDiarias",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "asp_servicios_barberia.Controllers.DetalleVentaProductosController",
-    "Method": "Get",
-    "RelativePath": "DetalleVentaProductos",
+    "ContainingType": "servicio_horarios.Controllers.CajasDiariasController",
+    "Method": "Listar",
+    "RelativePath": "CajasDiarias/Listar",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[lib_Barberia.Entidades.CajasDiarias, Lib_Barberia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "asp_servicios_barberia.Controllers.HorariosDisponibilidadController",
-    "Method": "Get",
-    "RelativePath": "HorariosDisponibilidad",
-    "HttpMethod": "GET",
+    "ContainingType": "servicio_horarios.Controllers.CajasDiariasController",
+    "Method": "Modificar",
+    "RelativePath": "CajasDiarias/Modificar",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.CajasDiarias",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.CajasDiarias",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "asp_servicios_barberia.Controllers.MetodosPagoController",
-    "Method": "Get",
-    "RelativePath": "MetodosPago",
-    "HttpMethod": "GET",
+    "ContainingType": "servicio_horarios.Controllers.CategoriasProductoController",
+    "Method": "Borrar",
+    "RelativePath": "CategoriasProducto/Borrar",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.CategoriasProducto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.CategoriasProducto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "asp_servicios_barberia.Controllers.PagosController",
-    "Method": "Get",
-    "RelativePath": "Pagos",
-    "HttpMethod": "GET",
+    "ContainingType": "servicio_horarios.Controllers.CategoriasProductoController",
+    "Method": "Guardar",
+    "RelativePath": "CategoriasProducto/Guardar",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.CategoriasProducto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.CategoriasProducto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "asp_servicios_barberia.Controllers.PermisosController",
-    "Method": "Get",
-    "RelativePath": "Permisos",
+    "ContainingType": "servicio_horarios.Controllers.CategoriasProductoController",
+    "Method": "Listar",
+    "RelativePath": "CategoriasProducto/Listar",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[lib_Barberia.Entidades.CategoriasProducto, Lib_Barberia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "asp_servicios_barberia.Controllers.ProductosController",
-    "Method": "Get",
-    "RelativePath": "Productos",
-    "HttpMethod": "GET",
+    "ContainingType": "servicio_horarios.Controllers.CategoriasProductoController",
+    "Method": "Modificar",
+    "RelativePath": "CategoriasProducto/Modificar",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.CategoriasProducto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.CategoriasProducto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "asp_servicios_barberia.Controllers.PromocionesController",
-    "Method": "Get",
-    "RelativePath": "Promociones",
-    "HttpMethod": "GET",
+    "ContainingType": "servicio_horarios.Controllers.CitasController",
+    "Method": "Borrar",
+    "RelativePath": "Citas/Borrar",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Citas",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Citas",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "asp_servicios_barberia.Controllers.ProveedoresController",
-    "Method": "Get",
-    "RelativePath": "Proveedores",
-    "HttpMethod": "GET",
+    "ContainingType": "servicio_horarios.Controllers.CitasController",
+    "Method": "Guardar",
+    "RelativePath": "Citas/Guardar",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Citas",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Citas",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "asp_servicios_barberia.Controllers.RolesController",
-    "Method": "Get",
-    "RelativePath": "Roles",
+    "ContainingType": "servicio_horarios.Controllers.CitasController",
+    "Method": "Listar",
+    "RelativePath": "Citas/Listar",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[lib_Barberia.Entidades.Citas, Lib_Barberia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "asp_servicios_barberia.Controllers.RolPermisosController",
-    "Method": "Get",
-    "RelativePath": "RolPermisos",
-    "HttpMethod": "GET",
+    "ContainingType": "servicio_horarios.Controllers.CitasController",
+    "Method": "Modificar",
+    "RelativePath": "Citas/Modificar",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Citas",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Citas",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "asp_servicios_barberia.Controllers.ServiciosController",
-    "Method": "Get",
-    "RelativePath": "Servicios",
-    "HttpMethod": "GET",
+    "ContainingType": "servicio_horarios.Controllers.CitaServiciosController",
+    "Method": "Borrar",
+    "RelativePath": "CitaServicios/Borrar",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.CitaServicios",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.CitaServicios",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "asp_servicios_barberia.Controllers.SucursalesController",
-    "Method": "Get",
-    "RelativePath": "Sucursales",
-    "HttpMethod": "GET",
+    "ContainingType": "servicio_horarios.Controllers.CitaServiciosController",
+    "Method": "Guardar",
+    "RelativePath": "CitaServicios/Guardar",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.CitaServicios",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.CitaServicios",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "asp_servicios_barberia.Controllers.UsuariosController",
-    "Method": "Get",
-    "RelativePath": "Usuarios",
+    "ContainingType": "servicio_horarios.Controllers.CitaServiciosController",
+    "Method": "Listar",
+    "RelativePath": "CitaServicios/Listar",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[lib_Barberia.Entidades.CitaServicios, Lib_Barberia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "asp_servicios_barberia.Controllers.VentaProductosController",
-    "Method": "Get",
-    "RelativePath": "VentaProductos",
+    "ContainingType": "servicio_horarios.Controllers.CitaServiciosController",
+    "Method": "Modificar",
+    "RelativePath": "CitaServicios/Modificar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.CitaServicios",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.CitaServicios",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.ClientesController",
+    "Method": "Borrar",
+    "RelativePath": "Clientes/Borrar",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Clientes",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Clientes",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.ClientesController",
+    "Method": "Guardar",
+    "RelativePath": "Clientes/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Clientes",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Clientes",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.ClientesController",
+    "Method": "Listar",
+    "RelativePath": "Clientes/Listar",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[lib_Barberia.Entidades.Clientes, Lib_Barberia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.ClientesController",
+    "Method": "Modificar",
+    "RelativePath": "Clientes/Modificar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Clientes",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Clientes",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.DetalleVentaProductosController",
+    "Method": "Borrar",
+    "RelativePath": "DetalleVentaProductos/Borrar",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.DetalleVentaProductos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.DetalleVentaProductos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.DetalleVentaProductosController",
+    "Method": "Guardar",
+    "RelativePath": "DetalleVentaProductos/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.DetalleVentaProductos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.DetalleVentaProductos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.DetalleVentaProductosController",
+    "Method": "Listar",
+    "RelativePath": "DetalleVentaProductos/Listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[lib_Barberia.Entidades.DetalleVentaProductos, Lib_Barberia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.DetalleVentaProductosController",
+    "Method": "Modificar",
+    "RelativePath": "DetalleVentaProductos/Modificar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.DetalleVentaProductos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.DetalleVentaProductos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.HorariosDisponibilidadController",
+    "Method": "Borrar",
+    "RelativePath": "HorariosDisponibilidad/Borrar",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.HorariosDisponibilidad",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.HorariosDisponibilidad",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.HorariosDisponibilidadController",
+    "Method": "Guardar",
+    "RelativePath": "HorariosDisponibilidad/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.HorariosDisponibilidad",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.HorariosDisponibilidad",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.HorariosDisponibilidadController",
+    "Method": "Listar",
+    "RelativePath": "HorariosDisponibilidad/Listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[lib_Barberia.Entidades.HorariosDisponibilidad, Lib_Barberia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.HorariosDisponibilidadController",
+    "Method": "Modificar",
+    "RelativePath": "HorariosDisponibilidad/Modificar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.HorariosDisponibilidad",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.HorariosDisponibilidad",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.MetodosPagoController",
+    "Method": "Borrar",
+    "RelativePath": "MetodosPago/Borrar",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.MetodosPago",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.MetodosPago",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.MetodosPagoController",
+    "Method": "Guardar",
+    "RelativePath": "MetodosPago/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.MetodosPago",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.MetodosPago",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.MetodosPagoController",
+    "Method": "Listar",
+    "RelativePath": "MetodosPago/Listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[lib_Barberia.Entidades.MetodosPago, Lib_Barberia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.MetodosPagoController",
+    "Method": "Modificar",
+    "RelativePath": "MetodosPago/Modificar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.MetodosPago",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.MetodosPago",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.PagosController",
+    "Method": "Borrar",
+    "RelativePath": "Pagos/Borrar",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Pagos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Pagos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.PagosController",
+    "Method": "Guardar",
+    "RelativePath": "Pagos/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Pagos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Pagos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.PagosController",
+    "Method": "Listar",
+    "RelativePath": "Pagos/Listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[lib_Barberia.Entidades.Pagos, Lib_Barberia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.PagosController",
+    "Method": "Modificar",
+    "RelativePath": "Pagos/Modificar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Pagos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Pagos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.PermisosController",
+    "Method": "Borrar",
+    "RelativePath": "Permisos/Borrar",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Permisos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Permisos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.PermisosController",
+    "Method": "Guardar",
+    "RelativePath": "Permisos/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Permisos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Permisos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.PermisosController",
+    "Method": "Listar",
+    "RelativePath": "Permisos/Listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[lib_Barberia.Entidades.Permisos, Lib_Barberia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.PermisosController",
+    "Method": "Modificar",
+    "RelativePath": "Permisos/Modificar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Permisos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Permisos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.ProductosController",
+    "Method": "Borrar",
+    "RelativePath": "Productos/Borrar",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Productos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Productos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.ProductosController",
+    "Method": "Guardar",
+    "RelativePath": "Productos/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Productos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Productos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.ProductosController",
+    "Method": "Listar",
+    "RelativePath": "Productos/Listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[lib_Barberia.Entidades.Productos, Lib_Barberia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.ProductosController",
+    "Method": "Modificar",
+    "RelativePath": "Productos/Modificar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Productos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Productos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.PromocionesController",
+    "Method": "Borrar",
+    "RelativePath": "Promociones/Borrar",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Promociones",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Promociones",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.PromocionesController",
+    "Method": "Guardar",
+    "RelativePath": "Promociones/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Promociones",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Promociones",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.PromocionesController",
+    "Method": "Listar",
+    "RelativePath": "Promociones/Listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[lib_Barberia.Entidades.Promociones, Lib_Barberia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.PromocionesController",
+    "Method": "Modificar",
+    "RelativePath": "Promociones/Modificar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Promociones",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Promociones",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.ProveedoresController",
+    "Method": "Borrar",
+    "RelativePath": "Proveedores/Borrar",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Proveedores",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Proveedores",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.ProveedoresController",
+    "Method": "Guardar",
+    "RelativePath": "Proveedores/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Proveedores",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Proveedores",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.ProveedoresController",
+    "Method": "Listar",
+    "RelativePath": "Proveedores/Listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[lib_Barberia.Entidades.Proveedores, Lib_Barberia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.ProveedoresController",
+    "Method": "Modificar",
+    "RelativePath": "Proveedores/Modificar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Proveedores",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Proveedores",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.RolesController",
+    "Method": "Borrar",
+    "RelativePath": "Roles/Borrar",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Roles",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Roles",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.RolesController",
+    "Method": "Guardar",
+    "RelativePath": "Roles/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Roles",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Roles",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.RolesController",
+    "Method": "Listar",
+    "RelativePath": "Roles/Listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[lib_Barberia.Entidades.Roles, Lib_Barberia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.RolesController",
+    "Method": "Modificar",
+    "RelativePath": "Roles/Modificar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Roles",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Roles",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.RolPermisosController",
+    "Method": "Borrar",
+    "RelativePath": "RolPermisos/Borrar",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.RolPermisos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.RolPermisos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.RolPermisosController",
+    "Method": "Guardar",
+    "RelativePath": "RolPermisos/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.RolPermisos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.RolPermisos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.RolPermisosController",
+    "Method": "Listar",
+    "RelativePath": "RolPermisos/Listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[lib_Barberia.Entidades.RolPermisos, Lib_Barberia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.RolPermisosController",
+    "Method": "Modificar",
+    "RelativePath": "RolPermisos/Modificar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.RolPermisos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.RolPermisos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.ServiciosController",
+    "Method": "Borrar",
+    "RelativePath": "Servicios/Borrar",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Servicios",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Servicios",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.ServiciosController",
+    "Method": "Guardar",
+    "RelativePath": "Servicios/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Servicios",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Servicios",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.ServiciosController",
+    "Method": "Listar",
+    "RelativePath": "Servicios/Listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[lib_Barberia.Entidades.Servicios, Lib_Barberia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.ServiciosController",
+    "Method": "Modificar",
+    "RelativePath": "Servicios/Modificar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Servicios",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Servicios",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.SucursalesController",
+    "Method": "Borrar",
+    "RelativePath": "Sucursales/Borrar",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Sucursales",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Sucursales",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.SucursalesController",
+    "Method": "Guardar",
+    "RelativePath": "Sucursales/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Sucursales",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Sucursales",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.SucursalesController",
+    "Method": "Listar",
+    "RelativePath": "Sucursales/Listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[lib_Barberia.Entidades.Sucursales, Lib_Barberia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.SucursalesController",
+    "Method": "Modificar",
+    "RelativePath": "Sucursales/Modificar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Sucursales",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Sucursales",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.UsuariosController",
+    "Method": "Borrar",
+    "RelativePath": "Usuarios/Borrar",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Usuarios",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Usuarios",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.UsuariosController",
+    "Method": "Guardar",
+    "RelativePath": "Usuarios/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Usuarios",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Usuarios",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.UsuariosController",
+    "Method": "Listar",
+    "RelativePath": "Usuarios/Listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[lib_Barberia.Entidades.Usuarios, Lib_Barberia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.UsuariosController",
+    "Method": "Modificar",
+    "RelativePath": "Usuarios/Modificar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.Usuarios",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.Usuarios",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.VentaProductosController",
+    "Method": "Borrar",
+    "RelativePath": "VentaProductos/Borrar",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.VentaProductos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.VentaProductos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.VentaProductosController",
+    "Method": "Guardar",
+    "RelativePath": "VentaProductos/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.VentaProductos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.VentaProductos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.VentaProductosController",
+    "Method": "Listar",
+    "RelativePath": "VentaProductos/Listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[lib_Barberia.Entidades.VentaProductos, Lib_Barberia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "servicio_horarios.Controllers.VentaProductosController",
+    "Method": "Modificar",
+    "RelativePath": "VentaProductos/Modificar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entidad",
+        "Type": "lib_Barberia.Entidades.VentaProductos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "lib_Barberia.Entidades.VentaProductos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

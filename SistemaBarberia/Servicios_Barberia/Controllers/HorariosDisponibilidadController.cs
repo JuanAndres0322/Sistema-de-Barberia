@@ -1,34 +1,46 @@
-﻿using lib_Barberia.Interfaces;
+﻿using lib_Barberia.Entidades;
 using Lib_Barberia.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Linq;
 
-namespace asp_servicios_barberia.Controllers
+namespace servicio_horarios.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class HorariosDisponibilidadController : ControllerBase
     {
-        private IConexion conexion;
+        private readonly IHorariosDisponibilidadAplicacion _HorariosDisponibilidadAplicacion;
 
-        public HorariosDisponibilidadController(IConexion conexion)
+        public HorariosDisponibilidadController(IHorariosDisponibilidadAplicacion HorariosDisponibilidadAplicacion)
         {
-            this.conexion = conexion;
-            this.conexion.StringConexion = "Server=.\\SQLEXPRESS;Database=BD_Barberia;Trusted_Connection=True;TrustServerCertificate=True;";
+            _HorariosDisponibilidadAplicacion = HorariosDisponibilidadAplicacion;
         }
 
+        // GET: /HorariosDisponibilidad/Listar
         [HttpGet]
-        public IActionResult Get()
+        public List<HorariosDisponibilidad> Listar()
         {
-            try
-            {
-                return Ok(this.conexion.HorariosDisponibilidad!.ToList());
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return _HorariosDisponibilidadAplicacion.Listar();
+        }
+
+        // POST: /HorariosDisponibilidad/Guardar
+        [HttpPost]
+        public HorariosDisponibilidad Guardar([FromBody] HorariosDisponibilidad entidad)
+        {
+            return _HorariosDisponibilidadAplicacion.Guardar(entidad);
+        }
+
+        // PUT: /HorariosDisponibilidad/Modificar
+        [HttpPut]
+        public HorariosDisponibilidad Modificar([FromBody] HorariosDisponibilidad entidad)
+        {
+            return _HorariosDisponibilidadAplicacion.Modificar(entidad);
+        }
+
+        // DELETE: /HorariosDisponibilidad/Borrar
+        [HttpDelete]
+        public HorariosDisponibilidad Borrar([FromBody] HorariosDisponibilidad entidad)
+        {
+            return _HorariosDisponibilidadAplicacion.Borrar(entidad);
         }
     }
 }

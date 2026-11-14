@@ -1,34 +1,46 @@
-﻿using lib_Barberia.Interfaces;
+﻿using lib_Barberia.Entidades;
 using Lib_Barberia.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Linq;
 
-namespace asp_servicios_barberia.Controllers
+namespace servicio_horarios.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class RolPermisosController : ControllerBase
     {
-        private IConexion conexion;
+        private readonly IRolPermisosAplicacion _RolPermisosAplicacion;
 
-        public RolPermisosController(IConexion conexion)
+        public RolPermisosController(IRolPermisosAplicacion RolPermisosAplicacion)
         {
-            this.conexion = conexion;
-            this.conexion.StringConexion = "Server=.\\SQLEXPRESS;Database=BD_Barberia;Trusted_Connection=True;TrustServerCertificate=True;";
+            _RolPermisosAplicacion = RolPermisosAplicacion;
         }
 
+        // GET: /RolPermisos/Listar
         [HttpGet]
-        public IActionResult Get()
+        public List<RolPermisos> Listar()
         {
-            try
-            {
-                return Ok(this.conexion.RolPermisos!.ToList());
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return _RolPermisosAplicacion.Listar();
+        }
+
+        // POST: /RolPermisos/Guardar
+        [HttpPost]
+        public RolPermisos Guardar([FromBody] RolPermisos entidad)
+        {
+            return _RolPermisosAplicacion.Guardar(entidad);
+        }
+
+        // PUT: /RolPermisos/Modificar
+        [HttpPut]
+        public RolPermisos Modificar([FromBody] RolPermisos entidad)
+        {
+            return _RolPermisosAplicacion.Modificar(entidad);
+        }
+
+        // DELETE: /RolPermisos/Borrar
+        [HttpDelete]
+        public RolPermisos Borrar([FromBody] RolPermisos entidad)
+        {
+            return _RolPermisosAplicacion.Borrar(entidad);
         }
     }
 }

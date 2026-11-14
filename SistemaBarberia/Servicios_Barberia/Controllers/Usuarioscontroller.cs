@@ -1,34 +1,46 @@
-﻿using lib_Barberia.Interfaces;
+﻿using lib_Barberia.Entidades;
 using Lib_Barberia.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Linq;
 
-namespace asp_servicios_barberia.Controllers
+namespace servicio_horarios.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class UsuariosController : ControllerBase
     {
-        private IConexion conexion;
+        private readonly IUsuariosAplicacion _UsuariosAplicacion;
 
-        public UsuariosController(IConexion conexion)
+        public UsuariosController(IUsuariosAplicacion UsuariosAplicacion)
         {
-            this.conexion = conexion;
-            this.conexion.StringConexion = "Server=.\\SQLEXPRESS;Database=BD_Barberia;Trusted_Connection=True;TrustServerCertificate=True;";
+            _UsuariosAplicacion = UsuariosAplicacion;
         }
 
+        // GET: /Usuarios/Listar
         [HttpGet]
-        public IActionResult Get()
+        public List<Usuarios> Listar()
         {
-            try
-            {
-                return Ok(this.conexion.Usuarios!.ToList());
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return _UsuariosAplicacion.Listar();
+        }
+
+        // POST: /Usuarios/Guardar
+        [HttpPost]
+        public Usuarios Guardar([FromBody] Usuarios entidad)
+        {
+            return _UsuariosAplicacion.Guardar(entidad);
+        }
+
+        // PUT: /Usuarios/Modificar
+        [HttpPut]
+        public Usuarios Modificar([FromBody] Usuarios entidad)
+        {
+            return _UsuariosAplicacion.Modificar(entidad);
+        }
+
+        // DELETE: /Usuarios/Borrar
+        [HttpDelete]
+        public Usuarios Borrar([FromBody] Usuarios entidad)
+        {
+            return _UsuariosAplicacion.Borrar(entidad);
         }
     }
 }

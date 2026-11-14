@@ -1,34 +1,46 @@
-﻿using lib_Barberia.Interfaces;
+﻿using lib_Barberia.Entidades;
 using Lib_Barberia.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Linq;
 
-namespace asp_servicios_barberia.Controllers
+namespace servicio_horarios.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class ProductosController : ControllerBase
     {
-        private IConexion conexion;
+        private readonly IProductosAplicacion _ProductosAplicacion;
 
-        public ProductosController(IConexion conexion)
+        public ProductosController(IProductosAplicacion ProductosAplicacion)
         {
-            this.conexion = conexion;
-            this.conexion.StringConexion = "Server=.\\SQLEXPRESS;Database=BD_Barberia;Trusted_Connection=True;TrustServerCertificate=True;";
+            _ProductosAplicacion = ProductosAplicacion;
         }
 
+        // GET: /Productos/Listar
         [HttpGet]
-        public IActionResult Get()
+        public List<Productos> Listar()
         {
-            try
-            {
-                return Ok(this.conexion.Productos!.ToList());
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return _ProductosAplicacion.Listar();
+        }
+
+        // POST: /Productos/Guardar
+        [HttpPost]
+        public Productos Guardar([FromBody] Productos entidad)
+        {
+            return _ProductosAplicacion.Guardar(entidad);
+        }
+
+        // PUT: /Productos/Modificar
+        [HttpPut]
+        public Productos Modificar([FromBody] Productos entidad)
+        {
+            return _ProductosAplicacion.Modificar(entidad);
+        }
+
+        // DELETE: /Productos/Borrar
+        [HttpDelete]
+        public Productos Borrar([FromBody] Productos entidad)
+        {
+            return _ProductosAplicacion.Borrar(entidad);
         }
     }
 }

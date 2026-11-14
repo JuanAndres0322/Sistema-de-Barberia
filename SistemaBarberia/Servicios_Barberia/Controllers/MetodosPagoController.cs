@@ -1,34 +1,46 @@
-﻿using lib_Barberia.Interfaces;
+﻿using lib_Barberia.Entidades;
 using Lib_Barberia.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Linq;
 
-namespace asp_servicios_barberia.Controllers
+namespace servicio_horarios.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class MetodosPagoController : ControllerBase
     {
-        private IConexion conexion;
+        private readonly IMetodosPagoAplicacion _MetodosPagoAplicacion;
 
-        public MetodosPagoController(IConexion conexion)
+        public MetodosPagoController(IMetodosPagoAplicacion MetodosPagoAplicacion)
         {
-            this.conexion = conexion;
-            this.conexion.StringConexion = "Server=.\\SQLEXPRESS;Database=BD_Barberia;Trusted_Connection=True;TrustServerCertificate=True;";
+            _MetodosPagoAplicacion = MetodosPagoAplicacion;
         }
 
+        // GET: /MetodosPago/Listar
         [HttpGet]
-        public IActionResult Get()
+        public List<MetodosPago> Listar()
         {
-            try
-            {
-                return Ok(this.conexion.MetodosPago!.ToList());
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return _MetodosPagoAplicacion.Listar();
+        }
+
+        // POST: /MetodosPago/Guardar
+        [HttpPost]
+        public MetodosPago Guardar([FromBody] MetodosPago entidad)
+        {
+            return _MetodosPagoAplicacion.Guardar(entidad);
+        }
+
+        // PUT: /MetodosPago/Modificar
+        [HttpPut]
+        public MetodosPago Modificar([FromBody] MetodosPago entidad)
+        {
+            return _MetodosPagoAplicacion.Modificar(entidad);
+        }
+
+        // DELETE: /MetodosPago/Borrar
+        [HttpDelete]
+        public MetodosPago Borrar([FromBody] MetodosPago entidad)
+        {
+            return _MetodosPagoAplicacion.Borrar(entidad);
         }
     }
 }

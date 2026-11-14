@@ -1,34 +1,46 @@
-﻿using lib_Barberia.Interfaces;
+﻿using lib_Barberia.Entidades;
 using Lib_Barberia.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Linq;
 
-namespace asp_servicios_barberia.Controllers
+namespace servicio_horarios.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class CategoriasProductoController : ControllerBase
     {
-        private IConexion conexion;
+        private readonly ICategoriasProductoAplicacion _CategoriasProductoAplicacion;
 
-        public CategoriasProductoController(IConexion conexion)
+        public CategoriasProductoController(ICategoriasProductoAplicacion CategoriasProductoAplicacion)
         {
-            this.conexion = conexion;
-            this.conexion.StringConexion = "Server=.\\SQLEXPRESS;Database=BD_Barberia;Trusted_Connection=True;TrustServerCertificate=True;";
+            _CategoriasProductoAplicacion = CategoriasProductoAplicacion;
         }
 
+        // GET: /CategoriasProducto/Listar
         [HttpGet]
-        public IActionResult Get()
+        public List<CategoriasProducto> Listar()
         {
-            try
-            {
-                return Ok(this.conexion.CategoriasProducto!.ToList());
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return _CategoriasProductoAplicacion.Listar();
+        }
+
+        // POST: /CategoriasProducto/Guardar
+        [HttpPost]
+        public CategoriasProducto Guardar([FromBody] CategoriasProducto entidad)
+        {
+            return _CategoriasProductoAplicacion.Guardar(entidad);
+        }
+
+        // PUT: /CategoriasProducto/Modificar
+        [HttpPut]
+        public CategoriasProducto Modificar([FromBody] CategoriasProducto entidad)
+        {
+            return _CategoriasProductoAplicacion.Modificar(entidad);
+        }
+
+        // DELETE: /CategoriasProducto/Borrar
+        [HttpDelete]
+        public CategoriasProducto Borrar([FromBody] CategoriasProducto entidad)
+        {
+            return _CategoriasProductoAplicacion.Borrar(entidad);
         }
     }
 }

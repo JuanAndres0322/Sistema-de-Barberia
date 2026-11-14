@@ -1,34 +1,46 @@
-﻿using lib_Barberia.Interfaces;
+﻿using lib_Barberia.Entidades;
 using Lib_Barberia.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Linq;
 
-namespace asp_servicios_barberia.Controllers
+namespace servicio_horarios.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class VentaProductosController : ControllerBase
     {
-        private IConexion conexion;
+        private readonly IVentaProductosAplicacion _VentaProductosAplicacion;
 
-        public VentaProductosController(IConexion conexion)
+        public VentaProductosController(IVentaProductosAplicacion VentaProductosAplicacion)
         {
-            this.conexion = conexion;
-            this.conexion.StringConexion = "Server=.\\SQLEXPRESS;Database=BD_Barberia;Trusted_Connection=True;TrustServerCertificate=True;";
+            _VentaProductosAplicacion = VentaProductosAplicacion;
         }
 
+        // GET: /VentaProductos/Listar
         [HttpGet]
-        public IActionResult Get()
+        public List<VentaProductos> Listar()
         {
-            try
-            {
-                return Ok(this.conexion.VentaProductos!.ToList());
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return _VentaProductosAplicacion.Listar();
+        }
+
+        // POST: /VentaProductos/Guardar
+        [HttpPost]
+        public VentaProductos Guardar([FromBody] VentaProductos entidad)
+        {
+            return _VentaProductosAplicacion.Guardar(entidad);
+        }
+
+        // PUT: /VentaProductos/Modificar
+        [HttpPut]
+        public VentaProductos Modificar([FromBody] VentaProductos entidad)
+        {
+            return _VentaProductosAplicacion.Modificar(entidad);
+        }
+
+        // DELETE: /VentaProductos/Borrar
+        [HttpDelete]
+        public VentaProductos Borrar([FromBody] VentaProductos entidad)
+        {
+            return _VentaProductosAplicacion.Borrar(entidad);
         }
     }
 }
