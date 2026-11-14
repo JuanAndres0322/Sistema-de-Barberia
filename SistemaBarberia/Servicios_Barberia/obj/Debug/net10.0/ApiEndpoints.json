@@ -1,15 +1,5 @@
 [
   {
-    "ContainingType": "asp_servicios_barberia.Controllers.BarberiaController",
-    "Method": "ObtenerTodo",
-    "RelativePath": "Barberia",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "servicio_horarios.Controllers.BarberosController",
     "Method": "Borrar",
     "RelativePath": "Barberos/Borrar",
