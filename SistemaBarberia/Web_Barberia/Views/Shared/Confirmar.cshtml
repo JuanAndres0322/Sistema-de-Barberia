@@ -1,0 +1,18 @@
+@model ConfirmarVM
+@{
+    ViewData["Title"] = "Borrar registro";
+}
+<header class="cabecera">
+    <div>
+        <a class="volver" asp-action="Index">Volver a @Model.Info.Titulo.ToLower()</a>
+        <h1>Borrar registro</h1>
+    </div>
+</header>
+
+<form method="post" class="confirmar">
+    <p>Vas a borrar <strong>@Model.Rotulo</strong> de @Model.Info.Titulo.ToLower(). Esta acción no se puede deshacer.</p>
+    <div class="botones">
+        <button type="submit" class="boton primario">Borrar</button>
+        <a class="boton" asp-action="Index">Cancelar</a>
+    </div>
+</form>

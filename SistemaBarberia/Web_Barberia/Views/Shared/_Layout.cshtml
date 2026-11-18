@@ -1,0 +1,39 @@
+@{
+    var actual = ViewContext.RouteData.Values["controller"]?.ToString();
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] · Barbería</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <a class="saltar" href="#contenido">Ir al contenido</a>
+    <div class="marco">
+        <nav class="lateral" aria-label="Secciones">
+            <a class="marca" asp-controller="Home" asp-action="Index">
+                <span class="poste" aria-hidden="true"></span>
+                <span>Barbería</span>
+            </a>
+            @foreach (var grupo in Catalogo.Todas.GroupBy(e => e.Grupo))
+            {
+                <p class="grupo">@grupo.Key</p>
+                <ul>
+                    @foreach (var e in grupo)
+                    {
+                        <li><a asp-controller="@e.Ruta" asp-action="Index" class="@(actual == e.Ruta ? "activo" : null)">@e.Titulo</a></li>
+                    }
+                </ul>
+            }
+        </nav>
+        <main id="contenido">
+            @RenderBody()
+        </main>
+    </div>
+</body>
+</html>

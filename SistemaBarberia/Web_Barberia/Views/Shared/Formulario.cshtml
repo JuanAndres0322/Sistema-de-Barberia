@@ -1,0 +1,83 @@
+@model FormularioVM
+@{
+    ViewData["Title"] = Model.Editando ? "Editar registro" : "Nuevo registro";
+}
+<header class="cabecera">
+    <div>
+        <a class="volver" asp-action="Index">Volver a @Model.Info.Titulo.ToLower()</a>
+        <h1>@ViewData["Title"]</h1>
+    </div>
+</header>
+
+@if (Model.Errores.Count > 0)
+{
+    <div class="aviso error" role="alert">
+        <ul>
+            @foreach (var e in Model.Errores)
+            {
+                <li>@e</li>
+            }
+        </ul>
+    </div>
+}
+
+<form method="post" class="formulario">
+    @foreach (var c in Model.Campos.Where(x => x.Tipo != TipoCampo.Clave))
+    {
+        var nombre = c.Propiedad.Name;
+        var valor = Model.Valores.TryGetValue(nombre, out var v) ? v : "";
+
+        <div class="campo @(c.Tipo == TipoCampo.TextoLargo ? "ancho" : null)">
+            <label for="@nombre">@c.Etiqueta@(c.Requerido ? " (obligatorio)" : "")</label>
+
+            @if (c.Tipo == TipoCampo.Relacion)
+            {
+                <select id="@nombre" name="@nombre">
+                    <option value="">Sin asignar</option>
+                    @if (Model.Opciones.TryGetValue(c.Relacion!, out var opciones))
+                    {
+                        foreach (var o in opciones.OrderBy(x => x.Value))
+                        {
+                            <option value="@o.Key" selected="@(valor == o.Key.ToString())">@o.Value</option>
+                        }
+                    }
+                </select>
+            }
+            else if (c.Tipo == TipoCampo.Booleano)
+            {
+                <select id="@nombre" name="@nombre">
+                    <option value="">Sin definir</option>
+                    <option value="true" selected="@(valor == "true")">Sí</option>
+                    <option value="false" selected="@(valor == "false")">No</option>
+                </select>
+            }
+            else if (c.Tipo == TipoCampo.TextoLargo)
+            {
+                <textarea id="@nombre" name="@nombre" rows="3">@valor</textarea>
+            }
+            else
+            {
+                var tipoInput = c.Tipo switch
+                {
+                    TipoCampo.Numero => "number",
+                    TipoCampo.Decimal => "number",
+                    TipoCampo.Fecha => "date",
+                    TipoCampo.FechaHora => "datetime-local",
+                    TipoCampo.Hora => "time",
+                    TipoCampo.Secreto => "password",
+                    _ => "text"
+                };
+                <input id="@nombre" name="@nombre" type="@tipoInput" value="@valor"
+                       step="@(c.Tipo == TipoCampo.Decimal ? "0.01" : c.Tipo == TipoCampo.Numero ? "1" : null)"
+                       required="@(c.Requerido ? "required" : null)"
+                       placeholder="@(Model.Editando && c.Tipo == TipoCampo.Secreto ? "Vacío para conservar la actual" : null)"
+                       autocomplete="off" />
+            }
+        </div>
+    }
+
+    <div class="botones">
+        <button type="submit" class="boton primario">@(Model.Editando ? "Guardar cambios" : "Guardar")</button>
+        <a class="boton" asp-action="Index">Cancelar</a>
+    </div>
+</form>
