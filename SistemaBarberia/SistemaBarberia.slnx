@@ -3,4 +3,5 @@
   <Project Path="Lib_Barberia/Lib_Barberia.csproj" />
   <Project Path="MSTest_Barberia/MSTest_Barberia.csproj" />
   <Project Path="Servicios_Barberia/Servicios_Barberia.csproj" Id="65e28e2d-b0fc-43a1-b4fe-7896c54f8e55" />
+  <Project Path="Web_Barberia/Web_Barberia.csproj" />
 </Solution>
