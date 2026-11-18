@@ -1,0 +1,60 @@
+@model ListaVM
+@{
+    ViewData["Title"] = Model.Info.Titulo;
+    var columnas = Model.Campos.Where(c => c.Tipo != TipoCampo.Clave).ToList();
+}
+<header class="cabecera">
+    <h1>@Model.Info.Titulo</h1>
+    <a class="boton primario" asp-action="Crear">Agregar</a>
+</header>
+
+@if (TempData["Ok"] is string ok)
+{
+    <p class="aviso ok" role="status">@ok</p>
+}
+@if (TempData["Error"] is string fallo)
+{
+    <p class="aviso error" role="alert">@fallo</p>
+}
+
+@if (Model.Error != null)
+{
+    <p class="aviso error" role="alert">@Model.Error</p>
+}
+else if (Model.Filas.Count == 0)
+{
+    <p class="vacio">Todavía no hay registros en @Model.Info.Titulo.ToLower(). Usa Agregar para crear el primero.</p>
+}
+else
+{
+    <div class="tabla-caja">
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col" class="id">Id</th>
+                    @foreach (var c in columnas)
+                    {
+                        <th scope="col">@c.Etiqueta</th>
+                    }
+                    <th scope="col"><span class="solo-lectores">Acciones</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var fila in Model.Filas)
+                {
+                    <tr>
+                        <td class="id">@fila.Id</td>
+                        @foreach (var celda in fila.Celdas)
+                        {
+                            <td>@celda</td>
+                        }
+                        <td class="acciones">
+                            <a asp-action="Editar" asp-route-id="@fila.Id">Editar</a>
+                            <a asp-action="Borrar" asp-route-id="@fila.Id">Borrar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}

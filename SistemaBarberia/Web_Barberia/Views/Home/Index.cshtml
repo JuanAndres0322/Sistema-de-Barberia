@@ -1,0 +1,24 @@
+@model InicioVM
+@{
+    ViewData["Title"] = "Inicio";
+}
+<header class="cabecera">
+    <h1>Panel de la barbería</h1>
+</header>
+
+<p class="aviso @(Model.Conectada ? "ok" : "error")" role="status">@Model.Mensaje</p>
+
+<p class="intro">Elige una sección para ver, agregar, editar o borrar registros.</p>
+
+@foreach (var grupo in Catalogo.Todas.GroupBy(e => e.Grupo))
+{
+    <section class="seccion">
+        <h2>@grupo.Key</h2>
+        <ul class="enlaces">
+            @foreach (var e in grupo)
+            {
+                <li><a asp-controller="@e.Ruta" asp-action="Index">@e.Titulo</a></li>
+            }
+        </ul>
+    </section>
+}
